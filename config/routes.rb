@@ -1,3 +1,7 @@
 Rails.application.routes.draw do
-  root "hello#index"
+  resource :session
+  resources :passwords, param: :token
+  root "products#index"
+
+  resources :products
 end
